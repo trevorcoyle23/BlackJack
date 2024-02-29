@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16sp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Dealer: "
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/dealerScore"
+                android:text="0"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/dealerShownCard"
+                android:layout_width="150dp"
+                android:layout_height="230dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/card_back" />
+
+            <ImageView
+                android:id="@+id/dealerHiddenCard"
+                android:layout_width="150dp"
+                android:layout_height="230dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/card_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Player: "
+                android:textSize="16dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/playerScore"
+                android:text="0"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/playerCard1"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/card_back"
+                android:layout_width="150dp"
+                android:layout_height="230dp" />
+
+            <ImageView
+                android:id="@+id/playerCard2"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/card_back"
+                android:layout_width="150dp"
+                android:layout_height="230dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/dealButton"
+                android:text="Deal"
+                android:textSize="16dp"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/hitButton"
+                android:text="Hit"
+                android:textSize="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/standButton"
+                android:text="Stand"
+                android:textSize="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/winner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textSize="36dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
